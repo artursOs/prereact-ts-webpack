@@ -14,6 +14,9 @@ const Anete = (props : { scooter: string }) => {
 
 export const Sveika = () => {
     return (
-        <Anete scooter="Good" />
+        <>
+            <link rel="stylesheet" type="text/css" href="styles.css" />
+            <Anete scooter="Good" />
+        </>
     )
 }
