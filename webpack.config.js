@@ -1,12 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     mode: "development",
     entry: path.join(__dirname, "src", "index.js"),
     output: {
         path:path.resolve(__dirname, "dist"),
+        filename: 'widget.js',
+        library: `Widget`,
+        libraryTarget: 'umd'
     },
     optimization: {
         minimize: true,
@@ -38,6 +42,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "index.html"),
         }),

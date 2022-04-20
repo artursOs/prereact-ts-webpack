@@ -6,5 +6,19 @@
 <body>
 <div class="root" id="root">
 </div>
+
+<script>
+    !function(){
+        const n=document.createElement("script");
+        n.type="text/javascript";
+        n.async=!0;
+        n.src="./widget.js";
+        n.onload=function(){
+            window.Widget.init({stars: 69});
+        };
+        const a=document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(n,a);
+    }();
+</script>
 </body>
 </html>

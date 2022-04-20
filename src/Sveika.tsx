@@ -3,7 +3,7 @@ import React from 'react';
 const Anete = (props : { scooter: string }) => {
     return (
         <div>
-            Sveika Anete
+            Sveika Anete!
             How was your Ride?
             <div>
                 my ride was {props.scooter}
